@@ -8,3 +8,40 @@
     alt="spongebob">
 
 <a href="/"><button  style="border-radius:10px; background-color:pink">Go back home</button></a>
+
+
+<br>
+<h3>Create your own Krabby Patty:</h3>
+
+    <form action="/burger" method="POST">
+         <label for="burger_name">Name your Burger : </label>
+         <input id="burger_name" type="text">
+         <label for="devoured">Devoured : </label>
+         <input id="devoured" type="text">
+    <br>
+         <button  style="border-radius:10px; background-color:pink" id="addBurger">Create Burger</button>
+
+    </form>
+
+<br>
+<br>
+ <h3>Update Burger:</h3>
+  <form action="/burger">
+    <label for="bid">Id Of the burger You Wish To Update:</label>
+    <input id="bid" type="text">
+    <br>
+    <label for="burger_name">name</label>
+    <input id="newname" type="text">
+    <br>
+    <br>
+    <button  style="border-radius:10px; background-color:pink" id="updateBUrger">Update</button>
+  </form>
+
+  <br>
+<br>
+<div class="previewCon">
+ <div id="userView">test</div>
+
+ </div>
+
+ <br>
