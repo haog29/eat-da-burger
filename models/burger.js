@@ -1,19 +1,20 @@
+// SCRATCHHHH:
 // const { fetch, alert } = window
 
 // const getBurgers = _ => {
 //     fetch('/burger')
 //       .then(r => r.json())
-//       .then(users => {
-//         document.querySelector('#userView').innerHTML = ''
-//         users.forEach(({ id, burger_name, devoured}) => {
+//       .then(burger => {
+//         document.querySelector('#bView').innerHTML = ''
+//         burger.forEach(({ id, burger_name, devoured}) => {
 //           let burgerDiv = document.createElement('div')
-//           userDiv.innerHTML = `
+//           burgerDiv.innerHTML = `
 //             <h3>#${id} ${burger_name}</h3>
 //             <h5>${devoured}</h5>
-          
 //             <button id="deleteBurger" data-bid="${id}">delete burger</button>
+//             <hr>
 //           `
-//           document.querySelector('#userView').append(burgerDiv)
+//           document.querySelector('#bView').append(burgerDiv)
 //         })
 //       })
 //       .catch(e => console.error(e))

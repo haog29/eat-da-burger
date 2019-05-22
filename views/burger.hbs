@@ -11,6 +11,11 @@
 
 
 <br>
+
+
+
+
+
 <h3>Create your own Krabby Patty:</h3>
 
     <form action="/burger" method="POST">
@@ -26,22 +31,42 @@
 <br>
 <br>
  <h3>Update Burger:</h3>
-  <form action="/burger">
-    <label for="bid">Id Of the burger You Wish To Update:</label>
+  <form action="/burger" method="PUT" >
+    <label for="bid">Enter burger id Update:</label>
     <input id="bid" type="text">
     <br>
-    <label for="burger_name">name</label>
+    <label for="burger_name"> Update name</label>
     <input id="newname" type="text">
     <br>
     <br>
-    <button  style="border-radius:10px; background-color:pink" id="updateBUrger">Update</button>
+    <button  style="border-radius:10px; background-color:pink" id="updateBurger">Update</button>
   </form>
 
   <br>
 <br>
-<div class="previewCon">
- <div id="userView">test</div>
 
- </div>
+ <div id="bView"></div>
 
  <br>
+
+<div class="row">
+
+ <div class="col s4">
+
+<div class='gonnaEat'>
+{{#each burger}}
+  <div>These burgers have been eaten</div>
+  {{#if this.devoured}}
+  <div>Burger Name : {{burger_name}}</div>
+  {{/if}}
+  <hr>
+  <hr>
+  <div>These burgers have NOT been eaten yet</div>
+  {{#else}}
+  <div>BUrger Name : {{burger_name}}</div>
+  {{/else}}
+{{/each}}
+</div>
+
+</div>
+</div>

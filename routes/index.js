@@ -12,11 +12,13 @@ module.exports = app => {
     return res.render('index')
   })
 
+//BURGER PAGE:
+
   //CREATE:POST
   app.post('/burger', (req, res)=>{
     db.query('INSERT INTO burgers SET ?', req.body, e => {
-     
-      // res.send(ok)
+   
+      // res.send(ok),
     // db.create(req.body, ()=> {
     res.render('burger')
   })
@@ -25,8 +27,9 @@ module.exports = app => {
 //READ:GET
 app.get('/burger', (req, res) => {
   db.query('SELECT * FROM burgers', (e, burger) => {
-   
-    res.json(burger)
+  res.render('burger', {burger : burger})
+    // res.json(burger)
+    // res.render('burger')
 })
 })
 
@@ -43,22 +46,11 @@ app.put('/burger/:id', (req, res) => {
 //DELETE
 
   app.delete('/burger/:id', (req, res) => {
-    db.query('DELETE FROM burgerS WHERE ?', { id: req.params.id }, e => {
+    db.query('DELETE FROM burgers WHERE ?', { id: req.params.id }, e => {
       
       res.sendStatus(200)
   })
   })
-
-
-
-
-//   app.get('/burger/:id', (req, res) => {
-//     db.query('SELECT * FROM burgers', (e, burger) => {
-     
-//       res.render('', { burger })
-//   })
-// })
-
 
 
 }
